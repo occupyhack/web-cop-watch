@@ -32,7 +32,7 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { margin: 0; font-size: 13px; line-height: 1.231; }
+body { margin: 0; font-size: 100%; line-height: 1.231; }
 
 body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
@@ -206,14 +206,41 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
+/* Headings
+-------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 { font-weight: bold; }
+
+h1 { font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
+h2 { font-size: 2em; margin-bottom: 0.75em; }
+h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
+h5 { font-size: 1em; margin-bottom: 1.5em; }
+h6 { font-size: 1em; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    text-decoration:none;
+}
 
 /* ==|== primary styles =====================================================
    Author: 
    ========================================================================== */
 
+body {
+    width:1140px;
+    margin:0 auto;
+}
 
-
-
+header{
+    background:black;
+    color:white;
+}
+    header h1 {
+        width:248px;
+        height:223px;
+        text-indent:-999px;
+        background:url(../img/logo.jpg);
+    }
 
 
 
