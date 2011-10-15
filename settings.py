@@ -115,6 +115,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 	'south',
 	'registration',
+	'registration_templates',
 	'incident_report',
 
     # Uncomment the next line to enable the admin:
