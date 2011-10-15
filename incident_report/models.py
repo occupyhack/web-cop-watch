@@ -57,4 +57,8 @@ class Incident(models.Model):
     victim		= models.ManyToManyField('Victim')
     nature		= models.CharField(max_length=128, blank=True, null=True)
     private		= models.BooleanField()
+    
+    def _unicode_(self):
+        return "buh"
+        
 # Create your models here.
