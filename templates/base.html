@@ -23,7 +23,8 @@
 
   <!-- CSS: implied media=all -->
   <!-- CSS concatenated and minified via ant build script-->
-  <link rel="stylesheet" href="{% get_static_prefix %}css/style.css">
+	<link rel="stylesheet" href="{% get_static_prefix %}css/1140.css">
+  	<link rel="stylesheet" href="{% get_static_prefix %}css/style.css">
   <!-- end CSS-->
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
@@ -36,22 +37,22 @@
 
 <body>
 
-	<div id="container">
-		<header>
+	<div class="container">
+		<header class="row">
 		{% block header %}
 			<h1>CopWatch</h1>
 			<span><em>The world is watching...</em></span>
 		{% endblock %}
 		</header>
 
-		<div id="main" role="main">
+		<div id="main" class="row" role="main">
 		{% block main %}
 			<h2>The Problem</h2>
 			<p>Protesters, political dissidents and innocent bystanders are routinely brutalized by police all over the world. This site aims to be a repository of incidents of brutality and a catalogue for evidence to assist victims and legal professionals.</p>
 		{% endblock %}
 		</div>
 
-		<footer>
+		<footer class="row">
 		{% block footer %}{% endblock %}
 		</footer>
 	</div> <!--! end of #container -->
