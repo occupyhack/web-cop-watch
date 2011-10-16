@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', direct_to_template, {'template': 'base.html'}),
     url(r'^incident/', include('webcopwatch.incident_report.urls')),
-    url(r'^accounts/', include('registration.backends.default.urls')),
+    url(r'^accounts/', include('registration_backends.email_as_username.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

@@ -117,6 +117,7 @@ INSTALLED_APPS = (
 	'registration',
 	'registration_templates',
 	'incident_report',
+	'registration_backends.email_as_username',
 
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
