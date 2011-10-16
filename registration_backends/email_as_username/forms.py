@@ -52,10 +52,10 @@ class RegistrationFormArbitraryUsername (registration.forms.RegistrationFormUniq
 
 class AuthenticationFormByEmail(forms.Form):
     """
-    Base class for authenticating users. Extend this to get a form that accepts
-    username/password logins.
+    Base class for authenticating users by email. Extend this to get a form
+    that accepts email/password logins.
     """
-    email = forms.CharField(label=_("Email"), max_length=30)
+    email = forms.CharField(label=_("Email"))
     password = forms.CharField(label=_("Password"), widget=forms.PasswordInput)
 
     def __init__(self, request=None, *args, **kwargs):
