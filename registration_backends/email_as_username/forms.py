@@ -31,7 +31,7 @@ class RegistrationFormArbitraryUsername (registration.forms.RegistrationFormUniq
             try:
                 # Use the first 15 characters of the email_user, concatenated
                 # with 15 random letters/numbers.
-                username = ''.join(random.choice(string.letters + string.digits)
+                username = ''.join(random.choice(string.ascii_letters + string.digits)
                                    for i in xrange(30))
                 user = User.objects.get(username__iexact=username)
             except User.DoesNotExist:
@@ -54,6 +54,9 @@ class AuthenticationFormByEmail(forms.Form):
     """
     Base class for authenticating users by email. Extend this to get a form
     that accepts email/password logins.
+
+    Mostly a clone of django.contrib.auth.forms.AuthenticationForm
+
     """
     email = forms.CharField(label=_("Email"))
     password = forms.CharField(label=_("Password"), widget=forms.PasswordInput)
