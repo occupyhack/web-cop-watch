@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-11-27 17:14+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: templates/registration/activate.html:15
+msgid "Activation successful"
+msgstr ""
+
+#: templates/registration/activate.html:17
+#, python-format
+msgid "You can now proceed to <a href=\"%(login_url)s\">login.</a>"
+msgstr ""
+
+#: templates/registration/activate.html:19
+msgid "Activation failed"
+msgstr ""
+
+#: templates/registration/activate.html:20
+msgid ""
+"Something went wrong while activating your account. This might mean that the "
+"activation code was wrong or that your account has already been activated."
+msgstr ""
+
+#: templates/registration/login.html:32 templates/registration/login.html:36
+msgid "Login"
+msgstr ""
+
+#: templates/registration/login.html:38
+msgid "Create an account"
+msgstr ""
+
+#: templates/registration/login.html:39
+msgid "Reset your password"
+msgstr ""
+
+#: templates/registration/registration_complete.html:13
+msgid "User registration successful"
+msgstr ""
+
+#: templates/registration/registration_complete.html:14
+msgid ""
+"We've e-mailed you instructions for activating your account to the e-mail "
+"address you submitted. You should be receiving it shortly."
+msgstr ""
+
+#: templates/registration/registration_form.html:16
+msgid "User registration"
+msgstr ""
+
+#: templates/registration/registration_form.html:20
+msgid "Create account"
+msgstr ""

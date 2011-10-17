@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: django-registration-templates\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-11-27 17:13+0100\n"
+"PO-Revision-Date: 2010-11-27 17:22+0100\n"
+"Last-Translator: Mathijs de Bruin <mathijs@mathijsfietst.nl>\n"
+"Language-Team: Mathijs de Bruin <mathijs@mathijsfietst.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/registration/activate.html:15
+msgid "Activation successful"
+msgstr "Activatie succesvol"
+
+#: templates/registration/activate.html:17
+#, python-format
+msgid "You can now proceed to <a href=\"%(login_url)s\">login.</a>"
+msgstr "U kunt nu doorgaan met <a href=\"%(login_url)s\">inloggen.</a>"
+
+#: templates/registration/activate.html:19
+msgid "Activation failed"
+msgstr "Activatie gefaald"
+
+#: templates/registration/activate.html:20
+msgid "Something went wrong while activating your account. This might mean that the activation code was wrong or that your account has already been activated."
+msgstr "Er is iets misgegaan bij het activeren van uw account. Dit zou veroorzaakt kunnen zijn doordat de activatiecode verkeerd was of omdat uw account al geactiveerd is."
+
+#: templates/registration/login.html:32
+#: templates/registration/login.html:36
+msgid "Login"
+msgstr "Login"
+
+#: templates/registration/login.html:38
+msgid "Create an account"
+msgstr "Maak een account aan"
+
+#: templates/registration/login.html:39
+msgid "Reset your password"
+msgstr "Stel uw wachtwoord opnieuw in"
+
+#: templates/registration/registration_complete.html:13
+msgid "User registration successful"
+msgstr "Gebruikersregistratie succesvol"
+
+#: templates/registration/registration_complete.html:14
+msgid "We've e-mailed you instructions for activating your account to the e-mail address you submitted. You should be receiving it shortly."
+msgstr "We hebben instructies gestuurd voor het activeren van uw account naar het email adres dat u heeft opgegeven. U zou deze binnen enkele minuten moeten ontvangen."
+
+#: templates/registration/registration_form.html:16
+msgid "User registration"
+msgstr "Gebruikersregistratie"
+
+#: templates/registration/registration_form.html:20
+msgid "Create account"
+msgstr "Maak account aan"
+
