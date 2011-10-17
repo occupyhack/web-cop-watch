@@ -22,7 +22,7 @@ following context:
     <http://docs.djangoproject.com/en/dev/ref/contrib/sites/>`_ for
     details regarding these objects' interfaces.
 {% endcomment %}{% load i18n %}
-{% url registration_activate_url activation_key as activate_url %}
+{% url registration_activate activation_key as activate_url %}
 {% blocktrans with site.name as site_name and site.domain as site_domain %}
 Dear,
 
