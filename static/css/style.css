@@ -236,13 +236,27 @@ header{
     color:white;
 }
     header h1 {
-        width:248px;
-        height:223px;
+        position:relative;
+        width:435px;
+        height:435px;
         text-indent:-999px;
-        background:url(../img/logo.jpg);
+        background:url(../img/logo.png);
     }
 
-
+label, input {
+	display:block;
+}
+#main form div label {
+    float:right;
+}
+#main form div input, #main form div select, #main form div textarea {
+    width:100%;
+    float:left;
+}
+#main form div input[type=checkbox]{
+    width:auto;
+    float:left;
+}
 
 
 

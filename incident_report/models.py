@@ -10,7 +10,7 @@ class Person(models.Model):
 class Cop(Person):
     badge_num	= models.CharField(max_length=128, blank=True, null=True)
     cert_num	= models.CharField(max_length=128, blank=True, null=True)
-    license_num	= models.CharField(max_length=10)
+    license_num	= models.CharField(max_length=10, blank=True, null=True)
     agency		= models.ForeignKey('Agency')
 
 class Witness(Person):
@@ -28,6 +28,7 @@ class Victim(Person):
     contact_phone	= PhoneNumberField()
     contact_email	= models.EmailField()
     contact_other	= models.TextField()
+    statement		= models.TextField()
 
 class Agency(models.Model):
     """Agencies will be presented as a dropdown and shouldn't be editable from the user-facing side"""

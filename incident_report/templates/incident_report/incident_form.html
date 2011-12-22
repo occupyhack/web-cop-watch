@@ -1,4 +1,57 @@
 {% extends "base.html" %}
 {% block main %}
-	{{ form }}
+	<h1>Report form</h1>
+	<form class="eightcol twopush" action="" method="post">
+	
+	<fieldset>
+	<legend>Incident</legend>
+    {% for form in forms.incident %}
+	        {% for field in form %}
+	        <div class="fieldWrapper twelvecol last">
+		        <div class="fourcol">{{ field.label_tag }}</div>
+		        <div class="eightcol last">{{ field }}</div>
+		    </div>
+		    {% endfor %}
+	{% endfor %}
+	</fieldset>
+    
+    <fieldset>
+    <legend>Victim</legend>
+	{% for form in forms.victim %}
+	        {% for field in form %}
+	        <div class="fieldWrapper twelvecol last">
+		        <div class="fourcol">{{ field.label_tag }}</div>
+		        <div class="eightcol last">{{ field }}</div>
+		    </div>
+		    {% endfor %}
+	{% endfor %}
+	</fieldset>
+	
+	<fieldset>
+	<legend>Witness</legend>
+	{% for form in forms.witness %}
+	        {% for field in form %}
+	        <div class="fieldWrapper twelvecol last">
+		        <div class="fourcol">{{ field.label_tag }}</div>
+		        <div class="eightcol last">{{ field }}</div>
+		    </div>
+		    {% endfor %}
+	{% endfor %}
+	</fieldset>
+	
+	<fieldset>
+	<legend>Cop</legend>
+	{% for form in forms.cop %}
+	        {% for field in form %}
+	        <div class="fieldWrapper twelvecol last">
+		        <div class="fourcol">{{ field.label_tag }}</div>
+		        <div class="eightcol last">{{ field }}</div>
+		    </div>
+		    {% endfor %}
+	{% endfor %}
+	</fieldset>
+	
+	<input type="submit" value="submit" />
+	</form>
+	
 {% endblock %}

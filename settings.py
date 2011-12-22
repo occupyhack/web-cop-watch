@@ -1,5 +1,5 @@
 # Django settings for webcopwatch project.
-import sys, os
+import sys, os, registration_templates
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -8,6 +8,8 @@ PROJECT_ROOT = os.path.dirname(__file__)
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
+
+INTERNAL_IPS = ('127.0.0.1',)
 
 MANAGERS = ADMINS
 
@@ -89,7 +91,7 @@ SECRET_KEY = '8(o-_avz!!7lt4^+9tvukm!^eb2m_bx1at4b^-2^)ns+=z(oo('
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+    'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -98,6 +100,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+	'debug_toolbar.middleware.DebugToolbarMiddleware'
 )
 
 ROOT_URLCONF = 'webcopwatch.urls'
@@ -118,12 +121,15 @@ INSTALLED_APPS = (
 	'registration_templates',
 	'incident_report',
 	'registration_backends.email_as_username',
-
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+	'debug_toolbar'
 )
+
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = '/tmp/app-messages' # change this to a proper location
 
 ACCOUNT_ACTIVATION_DAYS = 7
 LOGIN_REDIRECT_URL = '/'

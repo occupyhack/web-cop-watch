@@ -29,13 +29,22 @@ min-height: 1px;
 .row .onecol {
 width: 4.85%;
 }
+.row .onepush {
+margin-left:8.65%;
+}
 
 .row .twocol {
 width: 13.45%;
 }
+.row .twopush {
+margin-left:17.25%;
+}
 
 .row .threecol {
 width: 22.05%;
+}
+.row .threepush {
+margin-left:25.85%;
 }
 
 .row .fourcol {
