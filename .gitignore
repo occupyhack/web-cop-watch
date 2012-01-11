@@ -36,3 +36,4 @@ postgresql.conf.*
 pgexperts.conf.*
 sysctl.conf.*
 migrations
+SPEC
