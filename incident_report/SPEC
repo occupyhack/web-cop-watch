@@ -1,0 +1,30 @@
+PERSON can be re-used and is identified by an ID and a name.
+
+-A PERSON opens a new IncidentReport and chooses either VICTIM or WITNESS
+
+-All new Incidents are UNCONFIRMED unless they come from a TRUSTED USER
+
+	-If a PERSON is NOT LOGGED IN, they are WARNED about anonymous submission
+		-Anonymous submissions are accessible via link for X HOURS/DAYS after submission if they are NOT CONFIRMED
+		-Anonymous submissions get a ONE-TIME PASSWORD for editing
+		-Anonymous submissions must be corroborated by some number of users in order not to disappear
+			X TRUSTED USERS
+			X REGULAR USERS
+			X ANONYMOUS USERS
+
+	-If a PERSON is LOGGED IN
+		-Logged-in submissions are available via link
+		-Logged-in submissions don't disappear
+		-Logged-in submissions are editable by logging in to your account and finding the incident report
+		-Logged-in submissions must be corroborated to show up in the public database
+			X TRUSTED USERS
+			X REGULAR USERS
+			X ANONYMOUS USERS
+
+-All new INCIDENTS require at least one piece of EVIDENCE.
+	-Evidence can be:
+		-A VIDEO
+		-A PICTURE
+		-A STATEMENT
+
+	-All USERS can add EVIDENCE to a public INCIDENT

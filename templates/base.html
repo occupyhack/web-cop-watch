@@ -20,11 +20,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
   <!-- CSS: implied media=all -->
   <!-- CSS concatenated and minified via ant build script-->
-	<link rel="stylesheet" href="{% get_static_prefix %}css/1140.css">
+	<!-- link rel="stylesheet" href="{% get_static_prefix %}css/1140.css"-->
+	<link rel="stylesheet" href="{% get_static_prefix %}fnt/stylesheet.css">
   	<link rel="stylesheet" href="{% get_static_prefix %}css/style.css">
+  	<link rel="stylesheet/less" href="{% get_static_prefix %}css/style.less">
+  	<script src="{% get_static_prefix %}js/less-1.1.5.min.js"></script>
+  	
   <!-- end CSS-->
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
@@ -37,23 +40,26 @@
 </head>
 
 <body>
-
-	<div class="container">
-		<header class="row">
-		{% block header %}
-			<h1>CopWatch</h1>
+	<div class="row">
+		<header>
+			<h1><a href="/">CopWatch</a></h1>
 			<span><em>The world is watching...</em></span>
-		{% endblock %}
+			{% block menu %}
+				{% include "menu.html" %}
+			{% endblock %}
+			{% block header %}
+			
+			{% endblock %}
 		</header>
 
-		<div id="main" class="row" role="main">
+		<div id="main" role="main">
 		{% block main %}
 			<h2>The Problem</h2>
 			<p>Protesters, political dissidents and innocent bystanders are routinely brutalized by police all over the world. This site aims to be a repository of incidents of brutality and a catalogue for evidence to assist victims and legal professionals.</p>
 		{% endblock %}
 		</div>
 
-		<footer class="row">
+		<footer>
 		{% block footer %}{% endblock %}
 		</footer>
 	</div> <!--! end of #container -->

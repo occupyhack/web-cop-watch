@@ -1,0 +1,252 @@
+/* ==================================================================================================================== */
+/* ! The 1140px Grid V2 by Andy Taylor \ http://cssgrid.net \ http://www.twitter.com/andytlr \ http://www.andytlr.com   */
+/* ==================================================================================================================== */
+
+.container {
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.row {
+width: 100%;
+max-width: 1140px;
+min-width: 755px;
+margin: 0 auto;
+overflow: hidden;
+}
+
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
+margin-right: 3.8%;
+float: left;
+min-height: 1px;
+}
+
+.onecol {
+width: 4.85%;
+}
+.onepush {
+margin-left:8.65%;
+}
+
+.twocol {
+width: 13.45%;
+}
+.twopush {
+margin-left:17.25%;
+}
+
+.threecol {
+width: 22.05%;
+}
+.threepush {
+margin-left:25.85%;
+}
+
+.fourcol {
+width: 30.75%;
+}
+
+.fivecol {
+width: 39.45%;
+}
+
+.sixcol {
+width: 48%;
+}
+
+.sevencol {
+width: 56.75%;
+}
+
+.eightcol {
+width: 65.4%;
+}
+
+.ninecol {
+width: 74.05%;
+}
+
+.tencol {
+width: 82.7%;
+}
+
+.elevencol {
+width: 91.35%;
+}
+
+.twelvecol {
+width: 100%;
+float: left;
+}
+
+.last {
+margin-right: 0px;
+}
+
+img, object, embed {
+max-width: 100%;
+}
+
+img {
+	height: auto;
+}
+
+
+/* Smaller screens */
+
+@media only screen and (max-width: 1023px) {
+
+	body {
+	font-size: 0.8em;
+	line-height: 1.5em;
+	}
+	
+}
+
+.border-radius( @radius: 3px ) {
+	-webkit-border-radius: @radius;
+	   -moz-border-radius: @radius;
+	        border-radius: @radius;		
+}
+.box-shadow( @left: 0px, @top: 0px, @blur: 1px, @color: rgba(0,0,0,0.5) ) {
+	-webkit-box-shadow: @left @top @blur @color;
+	   -moz-box-shadow: @left @top @blur @color;
+	        box-shadow: @left @top @blur @color;		
+}
+header {
+    background:transparent;
+    .twocol;
+    position:fixed;
+}
+#main {
+    .tencol;
+    .last;
+    float:right;
+}
+
+header h1 {
+    position: relative;
+	width: 158px;
+	height: 200px;
+	background-color:#000a19;
+	.border-radius(5px);
+	.box-shadow(0px, 2px, 2px);
+	margin-bottom:10px;
+	margin-top:10px;
+	overflow:hidden;
+	a {
+	    width:0;
+	    height:100%;
+	    padding-left:158px;
+	    display:block
+	}
+	&:active{top:1px}
+}
+
+.awesome(@background:#b9c0c9, @color:#FFF) {
+    background:@background;
+    display: inline-block;
+    padding: 5px 10px 6px;
+    color: @color;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border:none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer;
+    &:hover { background-color: darken(@background,10%); color: @color; }
+    &:active { top: 1px; color: @color; }
+    &:visited { color: @color; }
+}
+
+header nav {
+    margin-top:20px;
+}
+header nav ul li a {
+   margin-bottom:10px;
+   width:138px;
+   .awesome;
+   &#report {
+       .awesome(#f93041);
+   }
+}
+/* OH FUCK OUR GRID IS ALL MIXINS NOW, SHIT DICKS */	
+fieldset {
+    padding:0;
+    margin:0;
+}	
+
+#main form div {
+    label {
+        .threecol;
+        text-align:right;
+    }
+    input, textarea, select {
+        .eightcol;
+        .last;
+    }
+}	
+
+#main form {
+    button, input[type="submit"] {
+        .awesome;
+        width:200px;
+    }
+}
+.messages, .errorlist {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    @success:#00B003;
+    @error:#B00000;
+    .message_li(@color: @error) {
+        background:@color;
+        border:2px solid;
+        border-color: lighten(@color, 30%);
+        .border-radius(10px);
+        padding:10px;
+        margin:10px 0px 10px 0px;
+    }
+    li {
+        .message_li;
+    }
+    .success {
+        .message_li(@success);
+    }
+    
+}
+
+/* Mobile */
+
+@media handheld, only screen and (max-width: 767px) {
+
+	body {
+	font-size: 16px;
+	-webkit-text-size-adjust: none;
+	}
+	
+	.row, body, .container {
+	width: 100%;
+	min-width: 0;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	}
+	
+	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+	width: auto;
+	float: none;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+	}
+
+}
