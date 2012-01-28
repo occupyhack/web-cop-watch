@@ -8,5 +8,6 @@ from incident_report.views import *
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', create),
+    url(r'^(?P<role>\w+)$', create),
+	url(r'^$', create),
 )

@@ -1,6 +1,8 @@
 PERSON can be re-used and is identified by an ID and a name.
 
--A PERSON opens a new IncidentReport and chooses either VICTIM or WITNESS
+-A PERSON opens a new IncidentReport and chooses either VICTIM, WITNESS, or THIRD PARTY
+	If NOT LOGGED IN and VICTIM or WITNESS:
+		A BLANK FORM for STATEMENT, followed by INCIDENT, COP
 
 -All new Incidents are UNCONFIRMED unless they come from a TRUSTED USER
 
