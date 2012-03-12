@@ -9,3 +9,7 @@ class IncidentForm(ModelForm):
 class EvidenceForm(ModelForm):
     class Meta:
 		model = Evidence
+		
+class EvidenceForm(ModelForm):
+    class Meta:
+		model = Evidence
